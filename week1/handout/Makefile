@@ -13,3 +13,12 @@ clean:
 	rm -f guess
 	rm -f roll
 	rm -f test_bitvec8
+
+mynameis: mynameis.c
+	gcc $(CFLAGS) mynameis.c -o mynameis
+
+repeatme: repeatme.c
+	$(CC) $(CFLAGS) repeatme.c -o repeatme
+
+noAs: noAs.c
+	gcc $(CFLAGS) noAs.c -o noAs

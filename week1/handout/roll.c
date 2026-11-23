@@ -15,7 +15,10 @@ int main(int argc, char* argv[]) {
     if (sscanf(argv[i], "%dd%d", &num_dice, &num_sides) == 2) {
       dice_dices[i-1] = num_dice;
       dice_sides[i-1] = num_sides;
-    } else {
+    } else if (sscanf(argv[i], "d%d", &num_sides) == 1){
+      dice_dices[i-1] = 1;
+      dice_sides[i-1] = num_sides;
+    }else {
       printf("Not a dice roll: %s\n", argv[i]);
       return 1;
     }
